@@ -1,0 +1,5 @@
+jupyterlab>=4.1
+ipywidgets>=8
+pygments>=2
+pytest>=7
+nbclient>=0.9

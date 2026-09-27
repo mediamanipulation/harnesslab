@@ -1,0 +1,60 @@
+{
+  "mission": {
+    "name": "research_assistant",
+    "duration_minutes": 60
+  },
+  "autonomy": {
+    "max_level": "stage",
+    "external_actions": false
+  },
+  "actions": {
+    "search": {
+      "level": "observe",
+      "reversibility": "read_only",
+      "budget_cost": 1
+    },
+    "draft_report": {
+      "level": "draft",
+      "reversibility": "reversible",
+      "budget_cost": 2
+    },
+    "stage_report": {
+      "level": "stage",
+      "reversibility": "reversible",
+      "budget_cost": 2
+    },
+    "internal_notification": {
+      "level": "execute_reversible",
+      "reversibility": "costly_reversible",
+      "budget_cost": 3,
+      "approval": "required"
+    },
+    "publish_report": {
+      "level": "execute_consequential",
+      "reversibility": "irreversible",
+      "budget_cost": 10,
+      "approval": "required"
+    },
+    "delete_records": {
+      "level": "execute_consequential",
+      "reversibility": "irreversible",
+      "budget_cost": 10,
+      "prohibited": true
+    }
+  },
+  "budget": {
+    "total": 30,
+    "warning": 20,
+    "hard_limit": 30
+  },
+  "checkpoints": {
+    "every_minutes": 20,
+    "before_irreversible_action": true
+  },
+  "stop_conditions": [
+    "budget_exhausted",
+    "policy_violation",
+    "context_drift",
+    "approval_expired"
+  ]
+}
