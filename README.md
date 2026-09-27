@@ -1,5 +1,7 @@
 # Chapter 2 HarnessLab — Refined Teaching Edition
 
+[![tests](https://github.com/mediamanipulation/harnesslab/actions/workflows/tests.yml/badge.svg)](https://github.com/mediamanipulation/harnesslab/actions/workflows/tests.yml)
+
 A vendor-neutral Jupyter companion for **Chapter 2: Autonomy — Graduated Control and Human Oversight**.
 
 ## Learning arc
